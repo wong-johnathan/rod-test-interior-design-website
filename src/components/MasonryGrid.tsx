@@ -15,6 +15,19 @@ interface MasonryGridProps {
   fixedCount?: number
 }
 
+/** Build interleaved items: project cards + CTAs at every CTA_INTERVAL */
+function buildInterleaved(projects: Project[], count: number) {
+  const items: Array<{ type: "project"; project: Project } | { type: "cta" }> = []
+  const visible = projects.slice(0, count)
+  visible.forEach((p, i) => {
+    items.push({ type: "project", project: p })
+    if ((i + 1) % CTA_INTERVAL === 0) {
+      items.push({ type: "cta" })
+    }
+  })
+  return items
+}
+
 export default function MasonryGrid({ projects, fixedCount }: MasonryGridProps) {
   const initialCount = fixedCount ?? BATCH_SIZE
   const [visibleCount, setVisibleCount] = useState(initialCount)
@@ -66,15 +79,28 @@ export default function MasonryGrid({ projects, fixedCount }: MasonryGridProps) 
 
   return (
     <>
-      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4 [column-fill:_balance]">
+      {/* Mobile / tablet: CSS columns (compact, masonry flow) */}
+      <div className="columns-1 gap-4 sm:columns-2 lg:hidden [column-fill:_balance]">
         {visibleProjects.map((project, index) => (
           <Fragment key={project.id}>
             <ProjectCard project={project} priority={index < 8} />
-            {(index + 1) % CTA_INTERVAL === 0 && (
-              <CTACard key={`cta-${index}`} />
-            )}
+            {(index + 1) % CTA_INTERVAL === 0 && <CTACard key={`cta-mobile-${index}`} />}
           </Fragment>
         ))}
+      </div>
+
+      {/* Desktop (lg+): CSS grid — CTAs span full width */}
+      <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 lg:gap-5">
+        {buildInterleaved(visibleProjects, visibleCount).map((item, idx) => {
+          if (item.type === "cta") {
+            return (
+              <div key={`cta-${idx}`} className="lg:col-span-3 xl:col-span-4">
+                <CTACard />
+              </div>
+            )
+          }
+          return <ProjectCard key={item.project.id} project={item.project} priority={idx < 8} />
+        })}
       </div>
 
       {/* Sentinel element for infinite scroll */}
