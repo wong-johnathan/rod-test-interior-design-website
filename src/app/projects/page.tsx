@@ -11,7 +11,13 @@ export const metadata: Metadata = {
   description: "Explore our portfolio of interior design projects across styles, rooms, and budgets.",
 }
 
-export default function ProjectsPage() {
+interface Props {
+  searchParams: Promise<{ style?: string; room?: string; budget?: string; q?: string }>
+}
+
+export default async function ProjectsPage({ searchParams }: Props) {
+  const params = await searchParams
+
   return (
     <>
       <section className="mx-auto max-w-7xl px-4 pt-16 pb-12 sm:px-6 lg:px-8">
@@ -24,7 +30,12 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        <ProjectsClient />
+        <ProjectsClient
+          initialStyle={params.style}
+          initialRoom={params.room}
+          initialBudget={params.budget}
+          initialQuery={params.q}
+        />
       </section>
 
       {/* Bottom CTA */}
