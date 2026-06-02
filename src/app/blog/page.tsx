@@ -6,7 +6,7 @@ import { blogPosts } from "@/data/blog-posts"
 import { CalendarIcon, ClockIcon, ArrowRightIcon } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Blog — Interior Design Tips & Guides",
+  title: "Blog - Interior Design Tips & Guides",
   description:
     "Singapore interior design tips, HDB renovation guides, cost breakdowns, and style inspiration from Rod's Interior.",
 }
