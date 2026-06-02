@@ -44,25 +44,29 @@ export default function Navbar() {
           <SheetTrigger className="md:hidden group/sheet-trigger inline-flex shrink-0 items-center justify-center rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none disabled:pointer-events-none disabled:opacity-50 has-[>svg]:px-2.5 has-[>svg]:py-2.5 hover:bg-accent hover:text-accent-foreground size-9" aria-label="Open menu">
             <MenuIcon className="size-5" />
           </SheetTrigger>
-          <SheetContent side="right" className="w-[280px] sm:w-[320px]">
-            <SheetHeader>
-              <SheetTitle className="text-left font-heading text-lg">Rod's Interior</SheetTitle>
+          <SheetContent side="right" className="w-[300px] sm:w-[360px] flex flex-col">
+            <SheetHeader className="px-6 pt-6">
+              <SheetTitle className="text-left font-heading text-xl">Rod's Interior</SheetTitle>
             </SheetHeader>
-            <nav className="mt-8 flex flex-col gap-4">
+            <nav className="mt-8 flex flex-1 flex-col gap-2 px-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link href="/contact" onClick={() => setOpen(false)} className="mt-4">
-                <Button className="w-full">Get a Quote</Button>
-              </Link>
             </nav>
+            <div className="px-6 pb-8">
+              <Link href="/contact" onClick={() => setOpen(false)}>
+                <Button className="w-full" size="lg">
+                  Get a Quote
+                </Button>
+              </Link>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
