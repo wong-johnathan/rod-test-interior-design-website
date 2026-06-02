@@ -41,11 +41,8 @@ export default function Navbar() {
 
         {/* Mobile nav trigger */}
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <MenuIcon className="size-5" />
-              <span className="sr-only">Open menu</span>
-            </Button>
+          <SheetTrigger className="md:hidden group/sheet-trigger inline-flex shrink-0 items-center justify-center rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none disabled:pointer-events-none disabled:opacity-50 has-[>svg]:px-2.5 has-[>svg]:py-2.5 hover:bg-accent hover:text-accent-foreground size-9" aria-label="Open menu">
+            <MenuIcon className="size-5" />
           </SheetTrigger>
           <SheetContent side="right" className="w-[280px] sm:w-[320px]">
             <SheetHeader>
