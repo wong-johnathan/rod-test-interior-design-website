@@ -51,7 +51,7 @@ export default function HomePage() {
             View All <ArrowRightIcon className="size-3.5" />
           </Link>
         </div>
-        <MasonryGrid projects={projects} />
+        <MasonryGrid projects={projects.filter((p) => p.featured)} fixedCount={12} />
       </section>
 
       <StickyCTA />
