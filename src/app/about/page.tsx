@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "lucide-react"
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Studio Rod — our philosophy, our process, and the people behind the designs.",
+    "Learn about Rod's Interior — our philosophy, our process, and the people behind the designs.",
 }
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
               <span className="text-muted-foreground">Intention</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Studio Rod was founded on a simple belief: great design transforms how we live, work,
+              Rod's Interior was founded on a simple belief: great design transforms how we live, work,
               and feel. Every project begins with listening — to the space, to the light, and most
               importantly, to you.
             </p>

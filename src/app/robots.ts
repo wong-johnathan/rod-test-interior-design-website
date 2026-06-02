@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://studiorod.com/sitemap.xml",
+    sitemap: "https://rodsinterior.com/sitemap.xml",
   }
 }

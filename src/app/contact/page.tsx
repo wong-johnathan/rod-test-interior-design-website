@@ -4,7 +4,7 @@ import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Studio Rod. Start your interior design project today.",
+  description: "Get in touch with Rod's Interior. Start your interior design project today.",
 }
 
 export default function ContactPage() {
@@ -29,8 +29,8 @@ export default function ContactPage() {
                 <MailIcon className="mt-0.5 size-5 text-muted-foreground shrink-0" />
                 <div>
                   <p className="text-sm font-medium">Email</p>
-                  <a href="mailto:hello@studiorod.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    hello@studiorod.com
+                  <a href="mailto:hello@rodsinterior.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    hello@rodsinterior.com
                   </a>
                 </div>
               </div>

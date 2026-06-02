@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="font-heading text-xl font-bold tracking-tight">
-              Studio Rod
+              Rod's Interior
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
-              Award-winning interior design studio crafting spaces that inspire. Based in New York, working worldwide.
+              Singapore-based interior design studio crafting spaces that inspire.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export default function Footer() {
         <Separator className="my-8" />
 
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-muted-foreground sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Studio Rod. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Rod's Interior. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
             <a href="#" className="hover:text-foreground transition-colors">Pinterest</a>

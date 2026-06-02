@@ -16,26 +16,26 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Studio Rod — Interior Design Portfolio",
-    template: "%s | Studio Rod",
+    default: "Rod's Interior — Singapore Interior Design Portfolio",
+    template: "%s | Rod's Interior",
   },
   description:
-    "Award-winning interior design studio crafting inspiring residential and commercial spaces. Based in New York, working worldwide.",
+    "Singapore-based interior design studio crafting inspiring residential and commercial spaces.",
   keywords: [
     "interior design",
     "interior designer",
     "home decor",
     "residential design",
     "commercial design",
-    "New York interior design",
-    "Studio Rod",
+    "Singapore interior design",
+    "Rod's Interior",
   ],
   openGraph: {
-    title: "Studio Rod — Interior Design Portfolio",
+    title: "Rod's Interior — Singapore Interior Design Portfolio",
     description:
-      "Award-winning interior design studio crafting inspiring residential and commercial spaces.",
-    url: "https://studiorod.com",
-    siteName: "Studio Rod",
+      "Singapore-based interior design studio crafting inspiring residential and commercial spaces.",
+    url: "https://rodsinterior.com",
+    siteName: "Rod's Interior",
     locale: "en_US",
     type: "website",
   },

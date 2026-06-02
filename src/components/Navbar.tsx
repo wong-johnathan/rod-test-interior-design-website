@@ -20,7 +20,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-heading text-xl font-bold tracking-tight">Studio Rod</span>
+          <span className="font-heading text-xl font-bold tracking-tight">Rod's Interior</span>
         </Link>
 
         {/* Desktop nav */}
@@ -46,7 +46,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="w-[280px] sm:w-[320px]">
             <SheetHeader>
-              <SheetTitle className="text-left font-heading text-lg">Studio Rod</SheetTitle>
+              <SheetTitle className="text-left font-heading text-lg">Rod's Interior</SheetTitle>
             </SheetHeader>
             <nav className="mt-8 flex flex-col gap-4">
               {navLinks.map((link) => (
