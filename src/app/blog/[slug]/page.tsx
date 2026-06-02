@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Content */}
       <div
-        className="prose prose-sm sm:prose-base max-w-none prose-headings:font-heading prose-headings:font-semibold prose-a:text-primary prose-img:rounded-xl"
+        className="prose prose-sm sm:prose-base max-w-full break-words prose-headings:font-heading prose-headings:font-semibold prose-a:text-primary prose-img:rounded-xl"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 

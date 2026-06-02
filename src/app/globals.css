@@ -127,4 +127,16 @@
   html {
     @apply font-sans;
   }
+  .prose {
+    overflow-wrap: break-word;
+  }
+  .prose img, .prose video, .prose iframe {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .prose pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
 }
